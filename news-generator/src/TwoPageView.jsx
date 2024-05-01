@@ -1,15 +1,23 @@
-function TwoPageView() {
+// import { useState } from "react";
+import { useState } from "react";
+import LeftPane from "./LeftPane";
+import RightPane from "./RightPane";
+
+export default function TwoPaneView() {
+  const [title, setTitle] = useState("");
+
+  function handleTitleValueChange(e) {
+    setTitle(e.target.value);
+  }
   return (
     <>
       <div className="flex h-screen">
         {/* Left Pane */}
-        <div className="w-1/3 bg-gray-200">Left Pane Content</div>
+        <LeftPane title={title} onChange={handleTitleValueChange} />
 
         {/* Right Pane */}
-        <div className="w-2/3 bg-gray-300">Right Pane Content</div>
+        <RightPane title={title} />
       </div>
     </>
   );
 }
-
-export default TwoPageView;
