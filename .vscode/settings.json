@@ -1,3 +1,6 @@
 {
-  "cSpell.words": ["Avenir", "tailwindcss"]
+  "cSpell.words": ["Avenir", "tailwindcss"],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
 }
