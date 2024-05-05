@@ -21,7 +21,7 @@ export default function TwoPaneView() {
   }
   return (
     <>
-      <div className="flex h-screen">
+      <div className="flex min-h-screen">
         {/* Left Pane */}
         <LeftPane
           title={title}
