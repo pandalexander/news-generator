@@ -8,7 +8,7 @@ export default function LeftPane({
 }) {
   return (
     <>
-      <div className="w-1/3 bg-gray-200 p-4">
+      <div className="w-5/12 bg-gray-200 p-4">
         <h1 className="text-4xl font-bold text-gray-800 mb-6">
           Create Your Fake News Masterpiece!
         </h1>
@@ -46,6 +46,10 @@ export default function LeftPane({
           placeholder="In a startling revelation, a team of researchers at the University of Feline Sciences has uncovered evidence suggesting that cats are not only internet sensations but are also the clandestine architects behind its operation..."
           className="w-full border border-gray-300 rounded-md px-3 py-2 mb-4 focus:outline-none focus:border-blue-500"
         />
+
+        <select name="" id="">
+          <option value=""></option>
+        </select>
       </div>
     </>
   );
