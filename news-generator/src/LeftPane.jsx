@@ -1,20 +1,12 @@
 import { imageArray } from "./ImageStorage";
 
-function ImageOptions() {
+function ImageOptions(onImageChange) {
   const arrayDataItems = imageArray.map((item) => (
     <option key={item.key} value={item.key}>
       {item.label}
     </option>
   ));
-  return (
-    <select
-      onChange={(e) => {
-        console.log(e.target.value);
-      }}
-    >
-      {arrayDataItems}
-    </select>
-  );
+  return <select onChange={onImageChange}>{arrayDataItems}</select>;
 }
 
 export default function LeftPane({
@@ -24,10 +16,11 @@ export default function LeftPane({
   onDateChange,
   articleContent,
   onArticleContentChange,
+  onImageChange,
 }) {
   return (
     <>
-      <div className="w-5/12 bg-gray-200 p-4">
+      <div className="w-3/5 bg-gray-200 p-4">
         <h1 className="text-4xl font-bold text-gray-800 mb-6">
           Create Your Fake News Masterpiece!
         </h1>
@@ -56,14 +49,14 @@ export default function LeftPane({
         <label htmlFor="imageOptions" className="font-semibold block mb-2">
           Image:
         </label>
-        <div className="mb-4">{ImageOptions()}</div>
+        <div className="mb-4">{ImageOptions(onImageChange)}</div>
 
         <label htmlFor="textarea" className="font-semibold block mb-2">
           Article Content:{" "}
         </label>
         <textarea
           name="articleContent"
-          rows={4}
+          rows={13}
           cols={40}
           value={articleContent}
           onChange={onArticleContentChange}

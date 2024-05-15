@@ -6,21 +6,24 @@ import conflictImage from "./assets/images/conflict.jpg";
 import governmentImage from "./assets/images/government.jpg";
 import protestImage from "./assets/images/protest.jpg";
 
-const catItem = { key: 0, label: "Cat", value: catImage };
+const undefinedItem = { key: 0, label: "Select...", value: undefined };
 
-const nervousItem = { key: 1, label: "Nervous", value: nervousImage };
+const catItem = { key: 1, label: "Cat", value: catImage };
 
-const sadItem = { key: 2, label: "Sad", value: sadImage };
+const nervousItem = { key: 2, label: "Nervous", value: nervousImage };
 
-const happyItem = { key: 3, label: "Happy", value: HappyImage };
+const sadItem = { key: 3, label: "Sad", value: sadImage };
 
-const conflictItem = { key: 4, label: "Conflict", value: conflictImage };
+const happyItem = { key: 4, label: "Happy", value: HappyImage };
 
-const governmentItem = { key: 5, label: "Government", value: governmentImage };
+const conflictItem = { key: 5, label: "Conflict", value: conflictImage };
 
-const protestItem = { key: 6, label: "Protest", value: protestImage };
+const governmentItem = { key: 6, label: "Government", value: governmentImage };
+
+const protestItem = { key: 7, label: "Protest", value: protestImage };
 
 export const imageArray = [
+  undefinedItem,
   catItem,
   nervousItem,
   sadItem,

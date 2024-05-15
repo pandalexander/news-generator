@@ -8,6 +8,7 @@ export default function TwoPaneView() {
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
   const [articleContent, setArticleContent] = useState("");
+  const [imageIndex, setImageIndex] = useState(0);
 
   function handleTitleValueChange(e) {
     setTitle(e.target.value);
@@ -21,6 +22,10 @@ export default function TwoPaneView() {
     setArticleContent(e.target.value);
   }
 
+  function handleImageChange(e) {
+    setImageIndex(e.target.value);
+  }
+
   return (
     <>
       <div className="flex min-h-screen">
@@ -32,10 +37,16 @@ export default function TwoPaneView() {
           onDateChange={handleDateValueChange}
           articleContent={articleContent}
           onArticleContentChange={handleArticleValueChange}
+          onImageChange={handleImageChange}
         />
 
         {/* Right Pane */}
-        <RightPane title={title} date={date} articleContent={articleContent} />
+        <RightPane
+          title={title}
+          date={date}
+          articleContent={articleContent}
+          imageIndex={imageIndex}
+        />
       </div>
     </>
   );
