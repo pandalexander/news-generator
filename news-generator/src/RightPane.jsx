@@ -1,4 +1,4 @@
-import imageArray from "./ImageStorage";
+import { imageArray } from "./ImageStorage";
 
 export default function RightPane({ title, date, articleContent }) {
   return (
@@ -8,7 +8,7 @@ export default function RightPane({ title, date, articleContent }) {
           <p className="text-3xl font-bold mb-4">{title}</p>
           <p className="text-gray-700 mb-4 italic">{date}</p>
           <div className="flex justify-center items-center">
-            <img src={imageArray[0]} alt="" className="max-w-full" />
+            <img src={imageArray[1].value} alt="" className="max-w-full mb-4" />
           </div>
           <pre
             style={{ fontFamily: "Playfair Display" }}

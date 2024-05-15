@@ -1,3 +1,22 @@
+import { imageArray } from "./ImageStorage";
+
+function ImageOptions() {
+  const arrayDataItems = imageArray.map((item) => (
+    <option key={item.key} value={item.key}>
+      {item.label}
+    </option>
+  ));
+  return (
+    <select
+      onChange={(e) => {
+        console.log(e.target.value);
+      }}
+    >
+      {arrayDataItems}
+    </select>
+  );
+}
+
 export default function LeftPane({
   title,
   onTitleChange,
@@ -34,6 +53,11 @@ export default function LeftPane({
           className="w-full border border-gray-300 rounded-md px-3 py-2 mb-4 focus:outline-none focus:border-blue-500"
         ></input>
 
+        <label htmlFor="imageOptions" className="font-semibold block mb-2">
+          Image:
+        </label>
+        <div className="mb-4">{ImageOptions()}</div>
+
         <label htmlFor="textarea" className="font-semibold block mb-2">
           Article Content:{" "}
         </label>
@@ -46,10 +70,6 @@ export default function LeftPane({
           placeholder="In a startling revelation, a team of researchers at the University of Feline Sciences has uncovered evidence suggesting that cats are not only internet sensations but are also the clandestine architects behind its operation..."
           className="w-full border border-gray-300 rounded-md px-3 py-2 mb-4 focus:outline-none focus:border-blue-500"
         />
-
-        <select name="" id="">
-          <option value=""></option>
-        </select>
       </div>
     </>
   );

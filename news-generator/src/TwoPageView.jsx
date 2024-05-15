@@ -1,5 +1,6 @@
 // import { useState } from "react";
 import { useState } from "react";
+// import { imageArray } from "./ImageStorage";
 import LeftPane from "./LeftPane";
 import RightPane from "./RightPane";
 
@@ -19,6 +20,7 @@ export default function TwoPaneView() {
   function handleArticleValueChange(e) {
     setArticleContent(e.target.value);
   }
+
   return (
     <>
       <div className="flex min-h-screen">
