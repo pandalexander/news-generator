@@ -63,7 +63,7 @@ function SocialIcons({ imageIndexCheck }) {
 export default function RightPane({ title, date, articleContent, imageIndex }) {
   return (
     <>
-      <div className="w-2/5 bg-gray-300 flex flex-col min-h-screen p-7">
+      <div className="sm:w-full lg:w-2/5 bg-gray-300 flex flex-col min-h-screen p-7">
         <div className="bg-white min-h-full rounded-lg shadow-lg font-inherit">
           <header className="bg-gray-900 py-4 px-6 rounded-t-lg">
             <div className="flex justify-between items-center">

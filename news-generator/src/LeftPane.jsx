@@ -20,7 +20,7 @@ export default function LeftPane({
 }) {
   return (
     <>
-      <div className="w-3/5 bg-gray-200 p-4">
+      <div className="sm:w-full lg:w-3/5 bg-gray-200 p-4">
         <h1 className="text-4xl font-bold text-gray-800 mb-6">
           Create Your Fake News Masterpiece!
         </h1>
